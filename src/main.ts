@@ -7,6 +7,7 @@ import { botonAzulInit } from "./components/boton-azul";
 
 
 
+
 (function main(){
     
     const rootEl = document.querySelector('#root');
@@ -19,29 +20,4 @@ import { botonAzulInit } from "./components/boton-azul";
     botonAzulInit();
 
 
-
-
-
-  
-    const piedraEl = document.querySelector('.piedra');
-    const papelEl = document.querySelector('.papel');
-    const tijeraEl = document.querySelector('.tijera');
-    piedraEl?.addEventListener('click', ()=>{
-        const oldState = state.getState();
-        oldState.push('piedra');
-        const newState = oldState
-        state.setState(newState)
-    });
-    papelEl?.addEventListener('click', ()=>{
-        const oldState = state.getState();
-        oldState.push('papel');
-        const newState = oldState
-        state.setState(newState)
-    });
-    tijeraEl?.addEventListener('click', ()=>{
-        const oldState = state.getState();
-        oldState.push('tijera');
-        const newState = oldState
-        state.setState(newState)
-    });
 })();

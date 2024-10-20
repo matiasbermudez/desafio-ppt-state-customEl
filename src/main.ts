@@ -1,9 +1,12 @@
 import { initRouter } from "./routes";
 import { state } from "./state";
 
+
 import { textContentInit } from "./components/text-content";
 import { botonesPptInit } from "./components/botones-ppt";
 import { botonAzulInit } from "./components/boton-azul";
+import { botonesPptConEventoInit } from "./components/botonConEvento";
+
 
 
 
@@ -18,6 +21,6 @@ import { botonAzulInit } from "./components/boton-azul";
     textContentInit();
     botonesPptInit();
     botonAzulInit();
-
+    botonesPptConEventoInit();
 
 })();

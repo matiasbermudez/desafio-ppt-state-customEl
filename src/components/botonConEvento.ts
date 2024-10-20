@@ -1,8 +1,9 @@
 import piedra from '../imgs/piedra.png'
 import papel from '../imgs/papel.png'
 import tijera from '../imgs/tijera.png'
-export function botonesPptInit(){
-    class BotonesPpt extends HTMLElement{
+import { state } from '../state';
+export function botonesPptConEventoInit(){
+    class BotonesPptConEvento extends HTMLElement{
         shadow = this.attachShadow({mode : "open"})
         ppt = this.getAttribute('ppt');
         jugador = this.getAttribute('player');
@@ -23,6 +24,12 @@ export function botonesPptInit(){
                 </button>
                 
             `
+            const botonConEvento = this.shadow.querySelector('.boton__ppt');
+            botonConEvento?.addEventListener('click', ()=>{
+                console.log("activado");
+                console.log(`Boton: ${this.ppt}`)
+                state.setJugada(`${this.ppt}`);
+            })
             
             if(this.jugador == "maquina__play"){
                 const button = this.shadow.querySelector('.boton__ppt');
@@ -55,5 +62,5 @@ export function botonesPptInit(){
         
     
         } 
-        customElements.define('botones-ppt-el', BotonesPpt)
+        customElements.define('botones-ppt-con-evento-el', BotonesPptConEvento)
     }

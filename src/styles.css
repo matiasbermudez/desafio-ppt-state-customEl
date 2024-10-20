@@ -143,6 +143,13 @@ body {
     font-size: 200px;
     
 }
+/*JUGADA*/
+.contenedor__jugada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
 /*SELECCION DE BOTON */
 .SelectedOff {
     transform: scale(0.5); 
@@ -150,6 +157,24 @@ body {
     pointer-events: none; 
     cursor: not-allowed; 
 }
-.LaMaquina{
-    width: 400px;
+.jugador__play{
+    transform: scale(1.5);
+    margin-bottom: 65px;
+    pointer-events: none; 
+    cursor: not-allowed; 
+}
+.botonOff{
+    display: none;
+}
+.contenedor__botones-evento{
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    bottom: 0;
+}
+.jugador__play-jugada{
+    transform: scale(2);
+    margin-bottom: 85px;
+    pointer-events: none; 
+    cursor: not-allowed; 
 }

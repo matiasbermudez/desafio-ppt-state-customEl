@@ -7,7 +7,6 @@ export function countDownInit(){
             this.render();
         }
         render(){
-            console.log('This.counter', this.counter)
             this.shadow.innerHTML = `
                 <div id="countdown" class="countdown-circle">
                      <div>

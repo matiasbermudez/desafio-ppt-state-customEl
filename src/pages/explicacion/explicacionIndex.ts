@@ -1,7 +1,4 @@
 import { botonAzulInit } from "../../components/boton-azul";
-import { botonesPptInit } from "../../components/botones-ppt";
-import { textContentInit } from "../../components/text-content";
-import { state } from "../../state";
 
 export function explicacionInit(params:any) {
     const divEl = document.createElement('div');

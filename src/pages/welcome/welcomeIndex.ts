@@ -5,8 +5,6 @@ import { state } from "../../state";
 
 export function welcomeInit(params) {
     const divEl = document.createElement('div');
-    const texto1 = "Soy un texto h2";
-    const texto2 = "Pero ahora cambie"
     divEl.innerHTML = `
     <div class="welcome__contenedor">
      <div class="welcome__titulo">

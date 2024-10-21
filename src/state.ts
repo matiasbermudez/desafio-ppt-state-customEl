@@ -1,4 +1,5 @@
-type jugadas = "piedra" | "papel" | "tijera"
+type jugadas = "piedra" | "papel" | "tijera";
+type jugadores = "jugador" | "maquina"
 const state = {
     data : [],
     jugadas : ["piedra","papel","tijera"],
@@ -54,6 +55,17 @@ const state = {
         }else if (jugadaPlayer === "papel" && jugadaMaquina === "tijera"){
             return "maquina"
         }
+    },
+    getResultado(player : jugadores):number{
+        //RECORRO EL STATE COMPLETO SI EL RESULTADO EL IGUAL AL PLAYER LE SUMO 1 AL CONTADOR, RETORNO CONTADOR
+        const arrayJugadas = this.getState();
+        let contador:number = 0;
+        arrayJugadas.forEach(jugada => {
+            if(jugada.ganador === player){
+                contador++
+            }
+        });
+        return contador 
     }
 }
 export  { state }

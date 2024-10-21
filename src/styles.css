@@ -130,6 +130,10 @@ body {
     text-align: right;
     margin-right: 20px;
 }
+.article__empate{
+    background-color: #0079AD;
+}
+
 /*JUGAR CSS*/
 .countdown-circle {
     margin-top: 150px;
@@ -149,6 +153,10 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 100px;
+}
+.jugador__play-jugada{
+    position: absolute;
+    bottom: 0;
 }
 /*SELECCION DE BOTON */
 .SelectedOff {
@@ -177,4 +185,32 @@ body {
     margin-bottom: 85px;
     pointer-events: none; 
     cursor: not-allowed; 
+}
+/*HISTORIAL*/
+.contenedor__historial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tabla{
+    background-color: rgba(160, 159, 159, 0.7);
+    
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 30px;
+    border-collapse: collapse;
+    border: 3px solid purple;
+}
+.tabla__tr{
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    padding: 5px;
+    margin: 0 30px 0 30px;
+    
 }

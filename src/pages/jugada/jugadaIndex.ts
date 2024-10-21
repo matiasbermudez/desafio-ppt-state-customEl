@@ -17,13 +17,12 @@ export function jugadaInit(params : any){
           > 
         </botones-ppt-el>
 
-        <boton-azul-el class="boton__principal">Volver a jugar</boton-azul-el>
         <h1>${oldState[largo].ganador}</h1>
+
         <botones-ppt-el ppt="${oldState[largo].jugador}" class="jugador__play-jugada "></botones-ppt-el>
-  
     `
     
-    let counter = 3;
+    let counter = 2;
     function countDownTry (){
         const intervalId = setInterval(()=>{
            counter--;
@@ -42,8 +41,8 @@ export function jugadaInit(params : any){
                 }else if (oldState[largo].ganador === "maquina"){
                     params.goTo('/perdiste');
                 }else{
-                    alert('Fue un empate, juguemos de nuevo!');
-                    params.goTo('/jugar');
+                    
+                    params.goTo('/empate');
                 }
             }
         }, 1000);

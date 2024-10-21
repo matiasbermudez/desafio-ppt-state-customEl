@@ -1,5 +1,7 @@
+import { empateInit } from "./pages/empate/empateIndex";
 import { explicacionInit } from "./pages/explicacion/explicacionIndex";
 import { ganasteInit } from "./pages/ganaste/ganasteIndex";
+import { historialInit } from "./pages/historial/historialIndex";
 import { jugadaInit } from "./pages/jugada/jugadaIndex";
 import { jugarInit } from "./pages/jugar/jugarIndex";
 import { perdisteInit } from "./pages/perdiste/perdisteIndex";
@@ -31,6 +33,14 @@ const routes = [
     {
         path: /\/perdiste/,
         component: perdisteInit
+    },
+    {
+        path: /\/empate/,
+        component: empateInit
+    },
+    {
+        path: /\/historial/,
+        component: historialInit
     }
 ]
 

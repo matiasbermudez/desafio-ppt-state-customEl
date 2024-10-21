@@ -72,38 +72,5 @@ export function jugarInit(params:any){
         botonPiedraEl?.classList.add('SelectedOff');
      });
 
-    //ONCLICK SETEO EL STATE, HIZOLAJUGADA SERA TRUE PARA QUE TE REDIRECCIONE Y LE ASIGNO A LOS DOS NO SELECTED LA CLASE SELECTEDOFF
-   
-    // piedraEl?.addEventListener('click', ()=>{
-    //    console.log('Piedra?')
-    //    state.setJugada("piedra");
-    //     //LUEGO DE LA SELECCION
-    //     hizoLaJugada = true;
-    //     piedraEl.classList.add('jugador__play')
-    //     papelEl?.classList.add('SelectedOff');
-    //     tijeraEl?.classList.add('SelectedOff');
-        
-    // });
-    // papelEl?.addEventListener('click', ()=>{
-    //     console.log('Papel?')
-    //     state.setJugada("papel");
-    //     //LUEGO DE LA SELECCION
-    //     hizoLaJugada = true;
-    //      papelEl.classList.add('jugador__play')
-    //     piedraEl?.classList.add('SelectedOff');
-    //     tijeraEl?.classList.add('SelectedOff');
-        
-    // });
-    // tijeraEl?.addEventListener('click', ()=>{
-    //     console.log('Tijera?')
-    //     state.setJugada("tijera");
-    //     //LUEGO DE LA SELECCION
-    //     hizoLaJugada = true;
-        
-    //      tijeraEl.classList.add('jugador__play')
-    //      papelEl?.classList.add('SelectedOff');
-    //      piedraEl?.classList.add('SelectedOff');
-        
-    // });
     return divEl
 }

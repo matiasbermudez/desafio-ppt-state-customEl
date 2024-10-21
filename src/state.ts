@@ -6,12 +6,15 @@ const state = {
     listeners: [],
     
     getState(){
+        this.syncWithLs();
         return this.data;
     },
     setState(newState){
+        this.syncWithLs();
         this.data = newState;
-        console.log('Este es el nuevo State: ', this.data);
-
+        localStorage.removeItem("jugadas-ls")
+        localStorage.setItem("jugadas-ls", JSON.stringify(this.data));
+        
         for(const cb of this.listeners){
             cb();
         }
@@ -19,6 +22,17 @@ const state = {
     suscribe(callback : ()=> any){
         this.listeners.push(callback)
     },
+    syncWithLs(){
+        const jugadasLs = localStorage.getItem('jugadas-ls')
+        this.data = jugadasLs ? 
+                               JSON.parse(jugadasLs)
+                              : [];                        
+    },
+    deleteHistorialLs(){
+        localStorage.removeItem('jugadas-ls');
+        this.setState([])
+    }
+    ,
     setMaquinaPlay(){
         //RANDOM QUE RESPONDE 1 JUGADA PIEDRA//PAPEL//TIJERA
         const jugadaPc = this.jugadas[Math.floor(Math.random() * 3)];

@@ -26,8 +26,6 @@ export function botonesPptConEventoInit(){
             `
             const botonConEvento = this.shadow.querySelector('.boton__ppt');
             botonConEvento?.addEventListener('click', ()=>{
-                console.log("activado");
-                console.log(`Boton: ${this.ppt}`)
                 state.setJugada(`${this.ppt}`);
             })
             

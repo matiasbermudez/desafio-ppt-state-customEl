@@ -6,9 +6,7 @@ export function jugadaInit(params : any){
     const divEl = document.createElement('div');
     divEl.classList.add('contenedor__jugada');
     const oldState = state.getState();
-    console.log('El estado en la jugada', oldState)
     const largo = (oldState.length - 1);
-    console.log("LARGO: ",largo)
     divEl.innerHTML = `
         <botones-ppt-el 
            ppt="${oldState[largo].maquina}"

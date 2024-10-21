@@ -20,7 +20,6 @@ export function welcomeInit(params) {
     const empezarEl = divEl.querySelector('.boton__principal');
     
     empezarEl?.addEventListener('click', ()=>{
-        console.log("empezarEl desde page  ")
         params.goTo('/explicacion')
     })
     return divEl

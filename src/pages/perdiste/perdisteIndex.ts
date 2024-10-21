@@ -4,7 +4,7 @@ export function perdisteInit(params: any) {
     const divEl = document.createElement('div');
     const jugador_puntaje:number = state.getResultado('jugador');
     const maquina_puntaje:number = state.getResultado('maquina');
-    console.log("Ultimo state: ",state.getState())
+
     divEl.innerHTML = `
     <div class="resultado__contenedor">
 
